@@ -14,7 +14,7 @@
   },
 
   "license": "CC BY-NC-SA 4.0",
-  "icon": "assets/naturescompass/icon.png",
+  "icon": "assets/fade/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -35,6 +35,5 @@
     "java": ">=16"
   },
   "suggests": {
-    "explorerscompass": "*"
   }
 }

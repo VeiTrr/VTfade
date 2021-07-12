@@ -16,21 +16,18 @@ import net.minecraft.util.registry.Registry;
 public class Fade implements ModInitializer {
 	
 	public static final String MODID = "fade";
-	
+
 	public static final Logger LOGGER = LogManager.getLogger(MODID);
 	
 	public static final FadeItem FADE_ITEM = new FadeItem();
-	
-	public static boolean canTeleport;
-	public static List<Identifier> allowedBiomes;
+
 	
 	@Override
 	public void onInitialize() {
 		
 		Registry.register(Registry.ITEM, new Identifier(MODID, "fade"), FADE_ITEM);
 
-		
-		allowedBiomes = new ArrayList<Identifier>();
+
 	}
 	
 }
