@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "fade",
+  "version": "${version}",
+
+  "name": "Nature's Compass",
+  "description": "First try in modding",
+  "authors": [
+    "VeiTr"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "https://github.com/MattCzyr/NaturesCompass"
+  },
+
+  "license": "CC BY-NC-SA 4.0",
+  "icon": "assets/naturescompass/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.vt.fade.Fade"
+    ],
+    "client": [
+      "com.vt.fade.FadeClient"
+    ]
+  },
+  "mixins": [
+    "fade.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "explorerscompass": "*"
+  }
+}
