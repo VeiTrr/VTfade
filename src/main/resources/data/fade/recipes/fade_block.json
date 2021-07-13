@@ -1,0 +1,19 @@
+{
+  "type" : "crafting_shaped",
+  "pattern" : [
+    "GGG",
+    "GFG",
+    "GGG"
+  ],
+  "key" : {
+    "G" : {
+      "item" : "pork"
+    },
+    "F" : {
+      "item" : "tnt"
+    }
+  },
+  "result" : {
+    "item" : "fade:fade_block"
+  }
+}
