@@ -2,20 +2,17 @@
   "schemaVersion": 1,
   "id": "fade",
   "version": "${version}",
-
-  "name": "Nature's Compass",
+  "name": "VT Fade",
   "description": "First try in modding",
   "authors": [
     "VeiTr"
   ],
   "contact": {
     "homepage": "",
-    "sources": "https://github.com/MattCzyr/NaturesCompass"
+    "sources": ""
   },
-
-  "license": "CC BY-NC-SA 4.0",
+  "license": "MIT",
   "icon": "assets/fade/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [

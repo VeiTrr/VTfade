@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "fade:block/fade_block"}
+    "": {
+      "model": "fade:block/fade_block"
+    }
   }
 }

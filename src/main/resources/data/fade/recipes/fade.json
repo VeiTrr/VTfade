@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:porkchop"
+      "item": "minecraft:dirt"
     },
     "T": {
-      "item": "minecraft:tnt"
+      "item": "minecraft:cobblestone"
     }
   },
   "result": {
-    "item": "fade:fade_block",
-    "count" : 1
+    "item": "fade:fade",
+    "count" : 9
   }
 }

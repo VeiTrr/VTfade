@@ -1,6 +1,24 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "fade:block/fade_block"
-  }
+    "particle": "fade:block/bomb_side",
+    "top": "fade:block/bomb_top",
+    "bottom": "fade:block/bomb_bottom",
+    "side": "fade:block/bomb_side",
+    "all": "fade:block/bomb_side"
+  },
+  "elements": [
+    {
+      "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "texture": "#bottom", "fade": "bottom" },
+        "up":    { "uv": [0,0, 16,16], "texture": "#top", "fade": "top" },
+        "north": { "uv": [0,0, 16,16], "texture": "#all", "fade": "north" },
+        "south": { "uv": [0,0, 16,16], "texture": "#all", "fade": "south" },
+        "west":  { "uv": [0,0, 16,16], "texture": "#all", "fade": "west" },
+        "east":  { "uv": [0,0, 16,16], "texture": "#all", "fade": "east" }
+      }
+    }
+  ]
 }
