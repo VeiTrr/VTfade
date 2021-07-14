@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -11,6 +13,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 
@@ -28,5 +32,14 @@ public class FadeBlock extends Block {
             world.createExplosion(player,pos.getX(),pos.getY(),pos.getZ(),10F, Explosion.DestructionType.BREAK);
         }
         return super.onUse(state, world, pos, player, hand, hit);
+    }
+
+    @Override
+    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
+            if (world.isReceivingRedstonePower(pos)) {
+                world.setBlockState(pos, Blocks.AIR.getDefaultState());
+                world.createExplosion(null,pos.getX(),pos.getY(),pos.getZ(),10F, Explosion.DestructionType.BREAK);
+            }
+        super.neighborUpdate(state, world, pos, block, fromPos, notify);
     }
 }
