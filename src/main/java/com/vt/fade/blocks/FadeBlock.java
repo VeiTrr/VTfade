@@ -29,7 +29,7 @@ public class FadeBlock extends Block {
         ItemStack itemStack = player.getMainHandStack();
         if(itemStack.getItem() .equals(Items.FLINT_AND_STEEL)) {
             world.setBlockState(pos, Blocks.AIR.getDefaultState());
-            world.createExplosion(player,pos.getX(),pos.getY(),pos.getZ(),10F, Explosion.DestructionType.BREAK);
+            world.createExplosion(player,pos.getX(),pos.getY(),pos.getZ(),10F, World.ExplosionSourceType.TNT);
         }
         return super.onUse(state, world, pos, player, hand, hit);
     }
@@ -38,7 +38,7 @@ public class FadeBlock extends Block {
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
             if (world.isReceivingRedstonePower(pos)) {
                 world.setBlockState(pos, Blocks.AIR.getDefaultState());
-                world.createExplosion(null,pos.getX(),pos.getY(),pos.getZ(),10F, Explosion.DestructionType.BREAK);
+                world.createExplosion(null,pos.getX(),pos.getY(),pos.getZ(),10F, World.ExplosionSourceType.TNT);
             }
         super.neighborUpdate(state, world, pos, block, fromPos, notify);
     }
