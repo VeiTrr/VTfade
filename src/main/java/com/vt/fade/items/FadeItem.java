@@ -2,9 +2,11 @@ package com.vt.fade.items;
 
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -16,7 +18,7 @@ import net.minecraft.world.World;
 public class FadeItem extends Item {
 
     public FadeItem() {
-        super(new FabricItemSettings().group(ItemGroup.MISC).maxCount(64));
+        super(new Item.Settings().maxCount(64));
     }
 
     @Override
