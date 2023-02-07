@@ -1,5 +1,6 @@
 package com.vt.fade;
 
+import com.vt.fade.entities.FadeBlockEntity;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import com.vt.fade.blocks.FadeBlock;
@@ -25,7 +26,6 @@ public class Fade implements ModInitializer {
 
     public static final Item FADE_BLOCK_ITEM = new BlockItem(FADE_BLOCK, new FabricItemSettings());
 
-    //public static final Item FADE_BLOCK_ITEM = new BlockItem(FADE_BLOCK, new Item.Settings().group(ItemGroup.REDSTONE));
 
 	
 	@Override
@@ -36,6 +36,7 @@ public class Fade implements ModInitializer {
 		Registry.register(Registries.BLOCK, new Identifier(MODID, "fade_block"), FADE_BLOCK);
 		Registry.register(Registries.ITEM, new Identifier(MODID, "fade_block"), FADE_BLOCK_ITEM);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(FADE_BLOCK_ITEM));
+
 
 
 
