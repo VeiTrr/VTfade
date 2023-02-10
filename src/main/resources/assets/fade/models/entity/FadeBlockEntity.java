@@ -1,15 +1,13 @@
-//Made with Blockbench
-//Paste this code into your mod.
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class bomb extends ModelBase {
+public class FadeBlockEntity extends ModelBase {
     private final ModelRenderer bone;
 
-    public bomb() {
+    public FadeBlockEntity() {
         textureWidth = 64;
         textureHeight = 32;
 
