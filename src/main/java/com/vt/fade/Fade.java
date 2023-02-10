@@ -1,6 +1,5 @@
 package com.vt.fade;
 
-import com.vt.fade.entities.FadeBlockEntity;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import com.vt.fade.blocks.FadeBlock;
@@ -8,7 +7,6 @@ import com.vt.fade.items.FadeItem;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -35,7 +33,7 @@ public class Fade implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(FADE_ITEM));
 		Registry.register(Registries.BLOCK, new Identifier(MODID, "fade_block"), FADE_BLOCK);
 		Registry.register(Registries.ITEM, new Identifier(MODID, "fade_block"), FADE_BLOCK_ITEM);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(FADE_BLOCK_ITEM));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> entries.add(FADE_BLOCK_ITEM));
 
 
 
